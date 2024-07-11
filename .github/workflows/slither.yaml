@@ -47,6 +47,7 @@ jobs:
         uses: crytic/slither-action@main
         continue-on-error: true
         with:
+          ignore-compile: true
           sarif: ${{ matrix.file}}
           node-version: "18"
           target: packages/${{ matrix.project}}
